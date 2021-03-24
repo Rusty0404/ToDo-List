@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+ 
+  <title>おしゃれなTo Do List</title>
+ 
+ <link rel="stylesheet" type="text/css" href="style.css">
+ 
+ <meta name="google-site-verification" content="IWx3MwsyWnMM-N0VuDFI6jrA4jvwHLXFJ85tqrdaNL0" />
+ 
+ <meta name="description" content="オシャレな[Todo list]のWEB版を作成してみました！javascriptのフレームワークはJQueryのみになります！、メモ帳感覚で是非ご活用ください。">
+
+ <link rel="stylesheet" href="css/s_calendar.min.css">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<meta http-equiv="Content-Script-Type" content="text/javascript"> 
+
+<link rel="stylesheet" href="style.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPWPPEJQTT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LPWPPEJQTT');
+  gtag('config', 'UA-189603706-2');
+</script></head>
+<body>
+
+<!-- ナビゲーションメニュー -->
+
+<h1><div class="textAnimation"><apan>To do List</apan></h1>
+</div>
+
+ <header>
+<nav>
+ <section>
+ 
+<label class="toggle" for="open"><i class="fa fa-bars" aria-hidden="true"></i>
+</label>
+<input id="open" type="checkbox">
+<div id="menu">
+  
+  <div class="sidebar">
+ 
+</div>
+
+   <div class="submenu">
+   <h3>テキスト保存•呼び出し•削除機能</h3>
+   <ul class="hidden">
+     
+     <li><input type="button" id="sample-load" value="保存内容を呼び出す" /></li>
+     <li><input type="button" id="sample-save" value="テキストを保存する" /><br><br><br><br><p>※フォーム内に入力してから保存して下さい</p></li>
+     <li><input type="button" id="sample-delete" value="テキストの保存を削除する" /></li>
+      <li><input type="button" class="calendar" value="今日の日付を確認する"></li>
+       <li><div class="help"></div><input type="button" class="sample-help" value="ヘルプ">
+       </li>
+        
+     </ul>
+   
+  </section>
+   </nav>
+   </header>
+
+
+<div class="wrapper">
+    <div class="inputField">
+      <input type="text" id="todo-id" class="todo-text" placeholder="Add your new todo">
+      <button class="add"><i class="fas fa-plus"></i>Add</button>
+
+    
+    </div>
+
+<div class="cp_hr02"></div>
+
+<div class="container">
+<input class="search__text" id="search" type="text" placeholder="List 絞り込み検索" />
+    
+  <div class="row">
+    <div class="col">
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+
+    <ul class="todoList">
+     <div class="cp_hr02"></div>
+
+    </ul>
+    
+    </div>
+  </div>
+    </div>
+
+     <div class="cp_hr03"></div>
+    
+    <div class="footer">
+      <span>保留中 <span class="pendingTasks"></span> Task</span>
+      <button id="Clear">Clear All</button><button id="btn" class="Checkbtn" type="button">Check数</button>
+
+    </div>
+  </div>
+
+
+
+ 
+<!-- カレンダー -->
+
+<div class="container-calendar">
+          <h4 id="monthAndYear"></h4>
+          <div class="button-container-calendar">
+              <button id="previous" onclick="previous()">↩︎</button>
+              <button id="next" onclick="next()">↪︎</button>
+          </div>
+          
+          <table class="table-calendar" id="calendar" data-lang="ja">
+              <thead id="thead-month"></thead>
+              <tbody id="calendar-body"></tbody>
+          </table>
+          
+          <div class="footer-container-calendar">
+              <label for="month">日付指定：</label>
+              <select id="month" onchange="jump()">
+                  <option value=0>1月</option>
+                  <option value=1>2月</option>
+                  <option value=2>3月</option>
+                  <option value=3>4月</option>
+                  <option value=4>5月</option>
+                  <option value=5>6月</option>
+                  <option value=6>7月</option>
+                  <option value=7>8月</option>
+                  <option value=8>9月</option>
+                  <option value=9>10月</option>
+                  <option value=10>11月</option>
+                  <option value=11>12月</option>
+              </select>
+              <select id="year" onchange="jump()"></select>
+          </div>
+    </div>
+
+
+<!-- admax-->
+<br><br><br><br><script src="https://adm.shinobi.jp/s/015febd2523b42893f60aedec2aa5410"></script>
+
+
+<form id="my_form" method="post">
+
+  <h2>Contact</h2>
+　<p>ご要望など•不具合等がある場合<br>こちらからお願い致します。</p>
+<hr>
+<ul class="snsbtniti">
+   
+<li><a href="https://twitter.com/Eurojp1" class="flowbtn fl_tw1"
+><i class="fab fa-twitter"></i><div>Twitter</div></a></li>
+
+
+
+<li><a href="https://www.instagram.com/Kazumin.WEB" class="flowbtn insta_btn1"><i class="fab fa-instagram"></i><div>Instagram</div></a></li>
+
+
+<li><a href="mailto:kaede.k.0404@gmail.com" class="flowbtn fl_ma1"><i class="far fa-envelope"></i><div>Contact</div></a></li>
+
+</ul>
+ 
+  
+<hr>
+
+</form>
+
+<div class="img-link">
+<!-- admax -->
+<script src="https://adm.shinobi.jp/s/967857a40762b7196a66fae045479aae"></script>
+<!-- admax -->
+</div>
+<div class="parent">
+   <h2 class="children">Information•New
+    </h2>
+</div>
+
+<div class="children2">
+<div class="overflow-div"> 
+
+<dt>2021/02/01</dt>
+<dd><nobr>こちらは To do Listページになります</dd></nobr>
+
+<dt>2021/02/01</dt>
+<dd>サイトを公開しました</dd>
+
+<dt>2021/02/01</dt>
+<dd>ページを更新しました(機能追加)</dd>
+
+<dt>2021/02/01</dt>
+<dd>メニュー内容追加しました(カレンダー)</dd>
+
+
+<dt>2021/02/10</dt>
+<dd>ページ内、リニューアルしました。</dd>
+
+<dt>2021/02/11</dt><dt style="color: red;">NEW</dt>
+<dd>更新やブラウザを閉じてもリストが残るように  変更されました。</dd>
+</dl>
+ </div>
+    </div>
+
+
+     
+</div>
+
+
+
+  <footer>
+
+<a href="index.html" class="gotop" >先頭に戻る</a>
+
+
+  <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+</footer>
+
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/3.4.1/jquery.cookie.js"></script>
+
+<script src="js/s_calendar.min.js"></script>
+<link rel="stylesheet" href="css/s_calendar.min.css">
+ 
+
+<script>
+//クリックイベント
+$(document).ready(function() {
+ $(".hidden").on("click", function() {
+  $(this).next().toggleClass("hidden");
+});
+
+});
+
+$(document).ready(function() {
+ $(".toggle").on("click", function() {
+   $(".hidden").slideToggle(1000);
+
+    $(".toggle").off("click", function() {
+   $(".hidden").slideToggle(1000);
+   });
+});
+
+});
+
+
+
+
+
+$(document).ready(function() {
+ $(".calendar").on("click", function() {
+   $(".container-calendar").slideToggle(1000);
+
+    $(".calendar").off("click", function() {
+   $(".container-calendar").show();
+   });
+});
+
+});
+
+$(document).ready(function() {
+$(".sample-help").click(function(){
+  alert("現在調整中ですしばらくお待ち下さい");
+});
+
+});
+
+
+//テキストAnimation
+const animation = document.querySelectorAll('.textAnimation');
+
+for(let i = 0; i < animation.length; i++){
+  const targetEleme = animation[i];
+  texts = targetEleme.textContent,
+  textsArray = [""];
+
+  targetEleme.textContent = "";
+
+  for(let h = 0; h < texts.split("").length; h++){
+  const space = texts.split("")[h];
+  
+  if(space === " "){
+     textsArray.push(" ");
+   } else {
+      textsArray.push('<span><span style="animation-delay: ' + ((h * .1) + .1) + 's;">' + space + '</span></span>')
+    }
+
+  }
+for(let j = 0; j < textsArray.length; j++){
+
+  targetEleme.innerHTML += textsArray[j];
+ }
+
+};
+
+
+
+
+const inputBox = document.querySelector(".inputField input");
+const addBtn = document.querySelector(".inputField button");
+const todoList = document.querySelector(".todoList");
+const deleteAllBtn = document.querySelector(".footer button");
+
+// onkeyup event
+inputBox.onkeyup = ()=>{
+  let userEnteredValue = inputBox.value; //ユーザーが入力した値を取得する
+  if(userEnteredValue.trim() != 0){ //if the user value isn't only spaces
+    addBtn.classList.add("active"); //active the add button
+  }else{
+    addBtn.classList.remove("active"); //unactive the add button
+  }
+}
+
+showTasks(); //showTask functionを呼ぶ
+
+addBtn.onclick = ()=>{ //プラスアイコンボタンをクリックしたとき
+  let userEnteredValue = inputBox.value; //入力フィールド値を取得
+  let getLocalStorageData = localStorage.getItem("New Todo"); //localstorageを取得
+  if(getLocalStorageData == null){ //if localstorageのデータがない場合
+    listArray = []; //空白の配列を作成する
+  }else{
+    listArray = JSON.parse(getLocalStorageData);  //transforming json string into a js object
+  }
+  listArray.push(userEnteredValue); //pushing or adding new value in array
+  localStorage.setItem("New Todo", JSON.stringify(listArray)); //transforming js object into a json string
+  showTasks(); //showTask関数を呼び出す
+  addBtn.classList.remove("active"); //タスクが追加されたら、追加ボタンを無効にする
+}
+
+function showTasks(){
+  let getLocalStorageData = localStorage.getItem("New Todo");
+  if(getLocalStorageData == null){
+    listArray = [];
+  }else{
+    listArray = JSON.parse(getLocalStorageData); 
+  }
+  const pendingTasksNumb = document.querySelector(".pendingTasks");
+  pendingTasksNumb.textContent = listArray.length; //保留中のタスクで配列の長さを渡す
+  if(listArray.length > 0){ //if 配列の長さ 0
+    deleteAllBtn.classList.add("active"); // delete button
+  }else{
+    deleteAllBtn.classList.remove("active"); // delete button
+  }
+  let newLiTag = "";
+  listArray.forEach((element, index) => {
+    newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span><input   class ="newCheck" type="checkbox"></li>`;
+  });
+  todoList.innerHTML = newLiTag; //liタグ
+  inputBox.value = ""; //タスクを追加したら、入力フィールドを空白のままにする
+todoList.className = "listLi";//liにクラス追加
+
+// Check Box追加
+let newCheck = "";
+  listArray.forEach((element, index) => {
+    newCheck += `${element}<class="newCheck" type="checkbox(${index})"> `;
+  });
+  
+
+// Check Boxが Checkされたらテキストに横線
+
+$(":checkbox").click(function(element, index) { if ($(this).is(":checked")) { $(this).closest("li").css("text-decoration", "line-through"); } else { $(this).closest("li").css("text-decoration", "none"); 
+} }); 
+
+
+   
+}
+
+
+
+// タスク削除機能
+
+function deleteTask(index){
+  let getLocalStorageData = localStorage.getItem("New Todo");
+  listArray = JSON.parse(getLocalStorageData);
+  listArray.splice(index, 1); //delete or remove the li
+  localStorage.setItem("New Todo", JSON.stringify(listArray));
+  showTasks(); // showTasksを呼ぶ
+}
+
+// すべてのタスクを削除する機能
+deleteAllBtn.onclick = ()=>{
+var res = confirm("全て空になりますが本当によろしいですか？  ※復元不可能です");
+if( res == true ) { //trueを返す
+alert("List内を全て削除しました。");
+  listArray = []; //配列を空にする
+  localStorage.setItem("New Todo", JSON.stringify(listArray)); //set the item in localstorage
+  showTasks(); // showTasksを呼ぶ
+}else {
+        // キャンセルならアラートボックスを表示
+        alert("キャンセルしました。");
+    }
+}
+
+
+//カウントボタンを取得する
+let btn = document.getElementById("btn");
+
+//チェック済みのチェックボックスの数を返す
+let getCheckedCount = () => {
+
+    let count = 0;
+
+     var inputElems = document.getElementsByTagName("input")
+
+    for (let i = 0; i < inputElems.length; i++) {
+        if (inputElems[i].checked === true) {
+            count++;
+        }
+
+    }
+alert(count + "  Check");
+
+};
+
+//ボタンをクリックした時に「getCheckedCount()」を呼びだす
+btn.addEventListener("click", getCheckedCount, false);
+
+
+
+
+
+ 
+$(document).ready(function() {
+ $(".togglebutton").on("click", function() {
+   $(".contents").slideToggle(1000);
+
+    $(".togglebutton").off("click", function() {
+   $(".contents").slideToggle(1000);
+   });
+});
+
+}); 
+
+
+
+
+//保存の呼び出し
+document.getElementById("sample-load").onclick = function(){
+
+    if(localStorage.getItem('memo') === null){
+        alert('内容が保存されていません。');
+        return false;
+    }
+    var text = localStorage.getItem('memo');
+    document.getElementById("todo-id").value = text;
+    alert('保存内容を呼び出しました。');
+};
+
+//保存ボタンの処理
+document.getElementById("sample-save").onclick = function(){
+    var text = document.getElementById("todo-id").value;
+
+    if(!text){
+        alert('内容が入力されていません。');
+        return false;
+    }
+    localStorage.setItem('memo', text);
+    alert('内容を保存しました。');
+};
+
+//削除ボタンの処理
+document.getElementById("sample-delete").onclick = function(){
+
+    if(localStorage.getItem('memo') === null){
+        alert('内容が保存されていません。');
+        return false;
+    }
+    localStorage.removeItem('memo');
+    alert('保存内容を削除しました。');
+};
+
+
+//カレンダー
+
+function generate_year_range(start, end) {
+  var years = "";
+  for (var year = start; year <= end; year++) {
+      years += "<option value='" + year + "'>" + year + "</option>";
+  }
+  return years;
+}
+
+var today = new Date();
+var currentMonth = today.getMonth();
+var currentYear = today.getFullYear();
+var selectYear = document.getElementById("year");
+var selectMonth = document.getElementById("month");
+
+var createYear = generate_year_range(1970, 2200);
+
+document.getElementById("year").innerHTML = createYear;
+
+var calendar = document.getElementById("calendar");
+var lang = calendar.getAttribute('data-lang');
+
+var months = ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"];
+var days = ["日", "月", "火", "水", "木", "金", "土"];
+
+var dayHeader = "<tr>";
+for (day in days) {
+  dayHeader += "<th data-days='" + days[day] + "'>" + days[day] + "</th>";
+}
+dayHeader += "</tr>";
+
+document.getElementById("thead-month").innerHTML = dayHeader;
+
+monthAndYear = document.getElementById("monthAndYear");
+showCalendar(currentMonth, currentYear);
+
+function next() {
+  currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
+  currentMonth = (currentMonth + 1) % 12;
+  showCalendar(currentMonth, currentYear);
+}
+
+function previous() {
+  currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
+  currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
+  showCalendar(currentMonth, currentYear);
+}
+
+function jump() {
+  currentYear = parseInt(selectYear.value);
+  currentMonth = parseInt(selectMonth.value);
+  showCalendar(currentMonth, currentYear);
+}
+
+function showCalendar(month, year) {
+
+  var firstDay = ( new Date( year, month ) ).getDay();
+
+  tbl = document.getElementById("calendar-body");
+
+  tbl.innerHTML = "";
+
+  monthAndYear.innerHTML = months[month] + " " + year;
+  selectYear.value = year;
+  selectMonth.value = month;
+
+  // creating all cells
+  var date = 1;
+  for ( var i = 0; i < 6; i++ ) {
+      var row = document.createElement("tr");
+
+      for ( var j = 0; j < 7; j++ ) {
+          if ( i === 0 && j < firstDay ) {
+              cell = document.createElement( "td" );
+              cellText = document.createTextNode("");
+              cell.appendChild(cellText);
+              row.appendChild(cell);
+          } else if (date > daysInMonth(month, year)) {
+              break;
+          } else {
+              cell = document.createElement("td");
+              cell.setAttribute("data-date", date);
+              cell.setAttribute("data-month", month + 1);
+              cell.setAttribute("data-year", year);
+              cell.setAttribute("data-month_name", months[month]);
+              cell.className = "date-picker";
+              cell.innerHTML = "<span>" + date + "</span>";
+
+              if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
+                  cell.className = "date-picker selected";
+              }
+              row.appendChild(cell);
+              date++;
+          }
+      }
+
+      tbl.appendChild(row);
+  }
+
+}
+
+function daysInMonth(iMonth, iYear) {
+  return 32 - new Date(iYear, iMonth, 32).getDate();
+}
+
+/*
+   localStorageのkeyの値を取得
+for (let i=0; i<localStorage.length; i++) {
+  const key   = localStorage.key(i);
+  const value = localStorage.getItem(key);
+   
+   console.log(`${key}:${value}`);
+		}
+     
+
+*/
+
+
+
+$(function(){
+  // テキストボックスでキーアップされた時に実行
+  $('.search__text').keyup(function(){
+    // テキストボックスの内容を保存
+    search__text = $(".search__text").val();
+    // ul内のliをすべて取得してループ
+    $('li').each(function(){
+      val = $(this).text();
+      if (val.match(search__text)) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
+});
+
+
+
+</script>
+  
+
+<script src="js/s_calendar.min.js"></script>
+
+
+  <script src="img/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,2494 @@
+@charset 'UTF-8';
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  /* nav見出しのスタイル */
+  .submenu h3 {
+    margin: 0 0 1em 0;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff0f5;
+    text-align: center;
+  }
+
+  /* nav機能のスタイル */
+
+  .submenu a {
+    color: White;
+  }
+
+  @keyframes menu {
+    0% {
+      transform: rotate(1turn);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: rotate(2000deg);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  /*  フォーム　*/
+  .todo-text {
+    height: 25px;
+    font-size: 13px;
+    position: absolute;
+    z-index: 3;
+    left: 120px;
+    font-family: "Lato", sana-serif;
+    box-shadow: 0 0 10px rgb(255 255 255);
+    color: #fff;
+  }
+
+  input#todo-id:hover {
+    background: black;
+  }
+
+  #save:hover {
+    background: #1d49aa;
+  }
+
+  #todo-form {
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+  }
+
+  #memo {
+    width: 40%;
+    height: 20px;
+    z-index: 3;
+    position: absolute;
+    right: 150px;
+  }
+
+  .add {
+    background: Blue;
+    position: relative;
+    left: 280px;
+    top: 5px;
+    width: 15%;
+    height: 28px;
+    font-size: 12px;
+    z-index: 3;
+    border-radius: 5px;
+  }
+
+  .footer span {
+    color: White;
+    font-size: 25px;
+  }
+
+  .pendingTasks {
+    background-color: red;
+    border-radius: 5px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  body {
+    background-color: #333;
+  }
+
+  #todo-list {
+    font-size: 30px;
+  }
+
+  h1 {
+    position: relative;
+    background-image: -webkit-linear-gradient(
+      315deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    text-align: center;
+    font-size: 50px;
+  }
+
+  /* リスト内のスタイル */
+  .list {
+    position: relative;
+    bottom: 10px;
+    color: White;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    background-image: -webkit-linear-gradient(
+      315deg,
+      #b8751e 0%,
+      #ffce08 37%,
+      #fefeb2 47%,
+      #fafad6 50%,
+      #fefeb2 53%,
+      #e1ce08 63%,
+      #b8751e 100%
+    );
+    background-image: linear-gradient(
+      135deg,
+      #b8751e 0%,
+      #ffce08 37%,
+      #fefeb2 47%,
+      #fafad6 50%,
+      #fefeb2 53%,
+      #e1ce08 63%,
+      #b8751e 100%
+    );
+    -webkit-text-fill-color: transparent;
+  }
+
+  .list::before {
+    content: "\A";
+    white-space: pre;
+  }
+
+  li {
+    color: White;
+    margin: 25px;
+    margin-right: 50px;
+    left: 30px;
+    top: 20px;
+    font-size: 30px;
+    padding: 6px;
+    height: 100%;
+    animation: slide 1s ease-in;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: rotateX(2000deg);
+    }
+
+    100% {
+      transform: rotateX(-360deg);
+    }
+  }
+
+  /* 区切り線 */
+  .cp_hr02 {
+    position: relative;
+    top: 30px;
+    height: 10px;
+    background: linear-gradient(45deg, #32a7f1 50%, #333 52%);
+    background-size: 20px 20px;
+    width: 100%;
+  }
+
+  .cp_hr03 {
+    position: relative;
+    height: 10px;
+    background: linear-gradient(45deg, #32a7f1 50%, #333 52%);
+    background-size: 20px 20px;
+    width: 100%;
+    top: 3px;
+  }
+
+  /* navメニューボタン */
+  .hidden {
+    display: none;
+    list-style: none;
+    text-align: center;
+  }
+
+  .hidden p {
+    font-size: 15px;
+  }
+
+  #sample-delete {
+    position: relative;
+    border-color: red;
+    background: black;
+    color: White;
+    width: 100%;
+  }
+
+  #sample-save {
+    position: relative;
+    border-color: orange;
+    background: Blue;
+    color: White;
+    width: 80%;
+    top: 60px;
+  }
+
+  #sample-load {
+    border-color: pink;
+    background: green;
+    color: White;
+    width: 85%;
+    position: relative;
+  }
+
+  .calendar {
+    position: relative;
+    border-color: White;
+    background: #ff88ff;
+    color: black;
+    width: 90%;
+    top: 30px;
+  }
+
+  #sample-text {
+    position: relative;
+    top: 20px;
+  }
+
+  #sample-load:hover {
+    background: #00552e;
+  }
+
+  #sample-save:hover {
+    background: #001f5b;
+  }
+
+  #sample-delete:hover {
+    background: #333;
+  }
+
+  #btn {
+    width: 30%;
+    color: White;
+    position: relative;
+    right: 40px;
+  }
+
+  #todo-form .Checkbtn {
+    display: none;
+  }
+
+  #addbutton:checked + .Checkbtn {
+    display: block;
+  }
+
+  /* チェックボタン数*/
+  .Checkbtn {
+    border: 5px outset #b9000e;
+    background-color: red;
+    position: relative;
+    left: 10px;
+  }
+
+  .Checkbtn:hover {
+    background-color: #b9000e;
+    border-radius: 5px;
+  }
+
+  /* カレンダー */
+  .wrapper {
+    margin: 15px auto;
+    max-width: 700px;
+  }
+  .container-calendar {
+    background: #ffffff;
+    padding: 15px;
+    width: 90%;
+    margin: 0 auto;
+    overflow: auto;
+    display: none;
+    height: 400px;
+    margin-top: 30px;
+  }
+  .button-container-calendar button {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #00a2b7;
+    color: #fff;
+    border: 1px solid #0aa2b5;
+    border-radius: 4px;
+    padding: 5px 10px;
+  }
+  .table-calendar {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .table-calendar th,
+  .table-calendar td {
+    padding: 10px;
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    vertical-align: top;
+  }
+  .date-picker.selected {
+    font-weight: bold;
+    color: #fff;
+    background: #cc0000;
+  }
+  .date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+  }
+  /* 日曜 */
+  .date-picker:nth-child(1) {
+    color: red;
+  }
+  /* 土曜 */
+  .date-picker:nth-child(7) {
+    color: blue;
+  }
+  #monthAndYear {
+    text-align: center;
+    margin-top: 0;
+  }
+  .button-container-calendar {
+    position: relative;
+    margin-bottom: 1em;
+    overflow: hidden;
+    clear: both;
+  }
+  #previous {
+    float: left;
+  }
+  #next {
+    float: right;
+  }
+  .footer-container-calendar {
+    margin-top: 1em;
+    border-top: 1px solid #dadada;
+    padding: 10px 0;
+  }
+  .footer-container-calendar select {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ffffff;
+    color: #454545;
+    border: 1px solid #bfc5c5;
+    border-radius: 3px;
+    padding: 5px 1em;
+  }
+
+  .textAnimation {
+    color: #ffffff;
+  }
+
+  /* タイトルアニメーション */
+
+  @keyframes shoBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+
+    50% {
+      color: yellow;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes shotop {
+    0% {
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+
+    50% {
+      color: black;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .textAnimation span:nth-of-type(odd) {
+    animation: shotop 3s;
+    animation-iteration-count: infinite;
+  }
+
+  .textAnimation span:nth-of-type(even) {
+    animation: shoBottom 3s;
+    animation-iteration-count: infinite;
+  }
+
+  .overflow-div {
+    /*スクロールバー幅*/
+    width: 400px;
+    height: 140px;
+    overflow: scroll;
+    color: White;
+    position: relative;
+    top: 90px;
+    border: solid 3px #111;
+  }
+
+  .parent {
+    margin-top: 80px;
+  }
+
+  .children {
+    position: absolute;
+    left: 120px;
+    font-size: 25px;
+    color: #fff;
+    margin-top: 30px;
+  }
+
+  /* instagram紫グラデ背景 */
+  .insta_btn1 {
+    background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
+      no-repeat;
+    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  }
+
+  /* Twitter */
+  .fl_tw1 {
+    background: #55acee;
+  }
+
+  /* はてブ */
+  .fl_hb1 {
+    background: #1ba5dc;
+  }
+
+  /* Pocket */
+  .fl_pk1 {
+    background: #ef3f56;
+  }
+
+  /* 問い合わせ */
+  .fl_ma1 {
+    background: #f3981d;
+  }
+
+  /* ボタン内テキスト調整 */
+  .flowbtn div {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0;
+    position: relative;
+  }
+  /* ボタンマウスホバー時 */
+  .flowbtn:hover {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    text-decoration: none;
+  }
+  /* ulタグの内側余白を０にする */
+  ul.snsbtniti {
+    padding: 0 !important;
+  }
+  /* ボタン全体の位置調整 */
+  .snsbtniti {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  /* LINE */
+  .fl_li1 {
+    background: #00c300;
+  }
+
+  /* ボタン全体 */
+  .flowbtn {
+    font-family: "Arial", sans-serif;
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    width: 66px;
+    height: 58px;
+    font-size: 30px;
+    color: #fff !important;
+    transition: 0.5s;
+    text-decoration: none;
+    box-shadow: 0 1px 2px #999;
+  }
+
+  /* ボタン同士の余白調整 */
+  .snsbtniti li {
+    flex: 0 0 20%;
+    padding: 20px;
+  }
+
+  .flowbtn i {
+    position: relative;
+    bottom: 1px;
+  }
+
+  /* Contact内 */
+
+  #my_form {
+    text-align: center;
+    background: black;
+    height: 100%;
+    position: relative;
+    top: 60px;
+  }
+
+  #my_form ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  #my_form ol p {
+    list-style: none;
+    display: inline-block;
+    width: 18%;
+    min-width: 90px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+  #my_form ol p.current a {
+    color: #f33135;
+  }
+  #my_form ol p a:hover {
+    color: #e7da66;
+  }
+
+  #my_form p {
+    color: White;
+  }
+
+  #my_form h2 {
+    color: #fff;
+    font-size: 40px;
+    position: relative;
+    top: 20px;
+  }
+
+  hr {
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .copyright {
+    font: 200 14px "Oswald", sans-serif;
+    color: #555;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    top: 100px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  #menu {
+    top: 0;
+    right: -340px;
+    overflow: hidden;
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    transition: left 0.5s, right 0.5s;
+    background-color: rgba(86, 86, 86, 0.7);
+    z-index: 2;
+  }
+
+  .toggle {
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    bottom: 90px;
+    left: 10px;
+    color: White;
+  }
+
+  .toggle:hover {
+    text-decoration: underline;
+  }
+
+  #open {
+    display: none;
+  }
+
+  #open:checked + #menu {
+    right: 0;
+  }
+
+  task {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    z-index: 2;
+    margin-left: 80px;
+    margin-bottom: 80px;
+  }
+
+  /* 追加詳細テキスト */
+  #todo-list p {
+    display: none;
+    padding: 0px;
+    position: relative;
+    bottom: 40px;
+    left: 50px;
+    font-size: 25px;
+  }
+
+  .togglebutton {
+    position: relative;
+    bottom: 10px;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    -webkit-box-shadow: 1px 2px 1px 2px;
+    box-shadow: 1px 1px 2px 2px;
+    border-radius: 30px;
+    height: 35px;
+  }
+
+  /* 全消去ボタン　*/
+  #Clear {
+    position: relative;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    -webkit-box-shadow: 1px 2px 1px 2px #e6d900;
+    box-shadow: 1px 1px 2px 2px #e6d900;
+    border-radius: 50%;
+    height: 35px;
+    color: White;
+  }
+
+  /* デフォルトのスタイル */
+  .newCheck {
+    position: relative;
+    background-color: White;
+    width: 23px;
+    height: 23px;
+    border-color: Blue;
+    left: 50px;
+  }
+
+  /*  CheckBoxのスタイル */
+  .newCheck:checked:before {
+    display: block;
+    box-sizing: border-box;
+    width: 26px;
+    height: 26px;
+    margin-top: -5px;
+    margin-right: 1.8px;
+    top: 4px;
+    position: absolute;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-color: Blue;
+    background-color: black;
+    animation: checkanime 0.1s;
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  /* チェックした時のスタイル */
+  .newCheck:checked:before {
+    position: absolute;
+    content: "✔︎";
+    font-size: 30px;
+    padding-bottom: 21px;
+    color: #fff;
+  }
+
+  /* チェックアニメーション */
+  @keyframes checkanime {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+
+    50% {
+      background-color: red;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* 先頭に戻る*/
+  .gotop {
+    position: fixed;
+    z-index: 100;
+    bottom: 130px;
+    right: 10px;
+    color: #cccccc;
+    font-size: 100%;
+    text-decoration: none;
+    padding: 5px 7px;
+    border-radius: 5px;
+    background-color: #000;
+    opacity: 0.4;
+  }
+  .gotop :hover {
+    opacity: 0.6;
+  }
+
+  .gotop {
+    filter: alpha(opacity=40);
+    zoom: 1;
+  }
+  .gotop :hover {
+    filter: alpha(opacity=60);
+  }
+
+  /* ヘルプ*/
+  .help::before {
+    content: "?";
+    font-size: 85%;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: 2px;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 50%;
+    background-color: #4287f5;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+  }
+
+  .sample-help {
+    position: relative;
+    color: #7444ac;
+    background-color: White;
+    border-radius: 5px;
+    font-size: 12px;
+    top: 30px;
+  }
+
+  ul .Box {
+    background: red;
+    z-index: 600;
+    display: block;
+  }
+
+  /* リスト内削除ボタン*/
+  .icon {
+    position: relative;
+    left: 25px;
+    background-color: black;
+    border-radius: 5px;
+  }
+}
+
+/* iPhonXR サイズ以上 */
+@media screen and (max-width: 414px) {
+  body {
+    width: 100%;
+  }
+
+  /* nav見出しのスタイル */
+  .submenu h3 {
+    margin: 0 0 1em 0;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff0f5;
+    text-align: center;
+  }
+
+  /* nav機能のスタイル */
+
+  .submenu a {
+    color: White;
+  }
+
+  @keyframes menu {
+    0% {
+      transform: rotate(1turn);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: rotate(2000deg);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  /*  フォーム　*/
+
+  .todo-text {
+    height: 31px;
+    font-size: 14px;
+    position: absolute;
+    z-index: 3;
+    left: 100px;
+    border: solid 1px #b3aca7;
+    width: 155px;
+    background: #333;
+    font-family: "Lato", sana-serif;
+    box-shadow: 0px 0px 10px rgb(255 255 255);
+    display: block;
+    color: #fff;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  /*  絞り込み検索　*/
+  input#search {
+    height: 25px;
+    font-size: 14px;
+    position: absolute;
+    z-index: 3;
+    left: 115px;
+    border: solid 1px #b3aca7;
+    width: 140px;
+    background: #333;
+    font-family: "Lato", sana-serif;
+    box-shadow: 0px 0px 6px rgb(2 255 255);
+    display: block;
+    color: #fff;
+    -webkit-appearance: none;
+    appearance: none;
+    top: 240px;
+  }
+
+  input#search:hover {
+    background: black;
+  }
+
+  input#todo-id:hover {
+    background: black;
+  }
+
+  .inputField {
+    margin-bottom: 50px;
+    position: relative;
+    bottom: 25px;
+  }
+
+  #save:hover {
+    background: #1d49aa;
+  }
+
+  #todo-form {
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+  }
+
+  #memo {
+    width: 40%;
+    height: 20px;
+    z-index: 3;
+    position: absolute;
+    right: 150px;
+  }
+
+  .add {
+    background: Blue;
+    position: relative;
+    left: 280px;
+    top: 0px;
+    width: 16%;
+    height: 35px;
+    font-size: 13px;
+    z-index: 3;
+    border-radius: 5px;
+  }
+
+  .footer span {
+    color: White;
+    font-size: 30px;
+    position: relative;
+    display: block;
+  }
+
+  .pendingTasks {
+    background-color: red;
+    border-radius: 5px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  body {
+    background-color: #333;
+  }
+
+  #todo-list {
+    font-size: 30px;
+  }
+
+  h1 {
+    position: relative;
+    background-image: -webkit-linear-gradient(
+      315deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    text-align: center;
+    font-size: 50px;
+  }
+
+  /* リスト内のスタイル */
+  .list {
+    position: relative;
+    bottom: 10px;
+    color: White;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    background-image: -webkit-linear-gradient(
+      315deg,
+      #b8751e 0%,
+      #ffce08 37%,
+      #fefeb2 47%,
+      #fafad6 50%,
+      #fefeb2 53%,
+      #e1ce08 63%,
+      #b8751e 100%
+    );
+    background-image: linear-gradient(
+      135deg,
+      #b8751e 0%,
+      #ffce08 37%,
+      #fefeb2 47%,
+      #fafad6 50%,
+      #fefeb2 53%,
+      #e1ce08 63%,
+      #b8751e 100%
+    );
+    -webkit-text-fill-color: transparent;
+  }
+
+  .list::before {
+    content: "\A";
+    white-space: pre;
+  }
+
+  li {
+    color: White;
+    margin: 25px;
+    margin-right: 50px;
+    left: 30px;
+    top: 20px;
+    font-size: 30px;
+    padding: 6px;
+    height: 100%;
+    animation: slide 1s ease-in;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: rotateX(2000deg);
+    }
+
+    100% {
+      transform: rotateX(-360deg);
+    }
+  }
+
+  /* 区切り線 */
+  .cp_hr02 {
+    position: relative;
+    top: 30px;
+    height: 10px;
+    background: linear-gradient(45deg, #32a7f1 50%, #333 52%);
+    background-size: 20px 20px;
+    width: 400px;
+  }
+
+  .cp_hr03 {
+    position: relative;
+    height: 10px;
+    background: linear-gradient(45deg, #32a7f1 50%, #333 52%);
+    background-size: 20px 20px;
+    width: 400px;
+    top: 3px;
+  }
+
+  /* navメニューボタン */
+  .hidden {
+    display: none;
+    list-style: none;
+    text-align: center;
+  }
+
+  .hidden p {
+    font-size: 15px;
+  }
+
+  #sample-delete {
+    position: relative;
+    border-color: red;
+    background: black;
+    color: White;
+    width: 100%;
+  }
+
+  #sample-save {
+    position: relative;
+    border-color: orange;
+    background: Blue;
+    color: White;
+    width: 100%;
+    top: 110px;
+  }
+
+  #sample-load {
+    border-color: pink;
+    background: green;
+    color: White;
+    width: 80%;
+    position: relative;
+  }
+
+  .calendar {
+    position: relative;
+    border-color: White;
+    background: #ff88ff;
+    color: black;
+    width: 100%;
+    top: 30px;
+  }
+
+  #sample-text {
+    position: relative;
+    top: 20px;
+  }
+
+  #sample-load:hover {
+    background: #00552e;
+  }
+
+  #sample-save:hover {
+    background: #001f5b;
+  }
+
+  #sample-delete:hover {
+    background: #333;
+  }
+
+  #btn {
+    width: 30%;
+    color: White;
+    position: relative;
+    margin-right: 60px;
+  }
+
+  #todo-form .Checkbtn {
+    display: none;
+  }
+
+  #addbutton:checked + .Checkbtn {
+    display: block;
+  }
+
+  /* チェックボタン数*/
+  .Checkbtn {
+    border: 5px outset #b9000e;
+    background-color: red;
+    position: relative;
+    right: 20px;
+  }
+
+  .Checkbtn:hover {
+    background-color: #b9000e;
+    border-radius: 5px;
+  }
+
+  /* カレンダー */
+  .wrapper {
+    margin: 15px auto;
+    max-width: 700px;
+  }
+  .container-calendar {
+    background: #ffffff;
+    padding: 15px;
+    width: 90%;
+    margin: 0 auto;
+    overflow: auto;
+    display: none;
+    height: 400px;
+    margin-top: 30px;
+    position: relative;
+    top: 70px;
+  }
+  .button-container-calendar button {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #00a2b7;
+    color: #fff;
+    border: 1px solid #0aa2b5;
+    border-radius: 4px;
+    padding: 5px 10px;
+  }
+  .table-calendar {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .table-calendar th,
+  .table-calendar td {
+    padding: 10px;
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    vertical-align: top;
+  }
+  .date-picker.selected {
+    font-weight: bold;
+    color: #fff;
+    background: #cc0000;
+  }
+  .date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+  }
+  /* 日曜 */
+  .date-picker:nth-child(1) {
+    color: red;
+  }
+  /* 土曜 */
+  .date-picker:nth-child(7) {
+    color: blue;
+  }
+  #monthAndYear {
+    text-align: center;
+    margin-top: 0;
+  }
+  .button-container-calendar {
+    position: relative;
+    margin-bottom: 1em;
+    overflow: hidden;
+    clear: both;
+  }
+  #previous {
+    float: left;
+  }
+  #next {
+    float: right;
+  }
+  .footer-container-calendar {
+    margin-top: 1em;
+    border-top: 1px solid #dadada;
+    padding: 10px 0;
+  }
+  .footer-container-calendar select {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ffffff;
+    color: #454545;
+    border: 1px solid #bfc5c5;
+    border-radius: 3px;
+    padding: 5px 1em;
+  }
+
+  .textAnimation {
+    color: #ffffff;
+  }
+
+  /* タイトルアニメーション */
+
+  @keyframes shoBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+
+    50% {
+      color: yellow;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes shotop {
+    0% {
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+
+    50% {
+      color: black;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .textAnimation span:nth-of-type(odd) {
+    animation: shotop 3s;
+    animation-iteration-count: infinite;
+  }
+
+  .textAnimation span:nth-of-type(even) {
+    animation: shoBottom 3s;
+    animation-iteration-count: infinite;
+  }
+
+  .overflow-div {
+    /*スクロールバー幅*/
+    width: 400px;
+    height: 140px;
+    overflow: scroll;
+    color: White;
+    position: relative;
+    top: 90px;
+    border: solid 3px #111;
+  }
+
+  .parent {
+    margin-top: 80px;
+  }
+
+  .children {
+    position: absolute;
+    left: 120px;
+    font-size: 25px;
+    color: #fff;
+    margin-top: 30px;
+  }
+
+  /* instagram紫グラデ背景 */
+  .insta_btn1 {
+    background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
+      no-repeat;
+    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  }
+
+  /* Twitter */
+  .fl_tw1 {
+    background: #55acee;
+  }
+
+  /* はてブ */
+  .fl_hb1 {
+    background: #1ba5dc;
+  }
+
+  /* Pocket */
+  .fl_pk1 {
+    background: #ef3f56;
+  }
+
+  /* 問い合わせ */
+  .fl_ma1 {
+    background: #f3981d;
+  }
+
+  /* ボタン内テキスト調整 */
+  .flowbtn div {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0;
+    position: relative;
+  }
+  /* ボタンマウスホバー時 */
+  .flowbtn:hover {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    text-decoration: none;
+  }
+  /* ulタグの内側余白を０にする */
+  ul.snsbtniti {
+    padding: 0 !important;
+  }
+  /* ボタン全体の位置調整 */
+  .snsbtniti {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  /* LINE */
+  .fl_li1 {
+    background: #00c300;
+  }
+
+  /* ボタン全体 */
+  .flowbtn {
+    font-family: "Arial", sans-serif;
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    width: 66px;
+    height: 58px;
+    font-size: 30px;
+    color: #fff !important;
+    transition: 0.5s;
+    text-decoration: none;
+    box-shadow: 0 1px 2px #999;
+  }
+
+  /* ボタン同士の余白調整 */
+  .snsbtniti li {
+    flex: 0 0 20%;
+    padding: 20px;
+  }
+
+  .flowbtn i {
+    position: relative;
+    bottom: 1px;
+  }
+
+  /* Contact内 */
+
+  #my_form {
+    text-align: center;
+    background: black;
+    height: 100%;
+    position: relative;
+    top: 60px;
+  }
+
+  #my_form ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  #my_form ol p {
+    list-style: none;
+    display: inline-block;
+    width: 18%;
+    min-width: 90px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+  #my_form ol p.current a {
+    color: #f33135;
+  }
+  #my_form ol p a:hover {
+    color: #e7da66;
+  }
+
+  #my_form p {
+    color: White;
+  }
+
+  #my_form h2 {
+    color: #fff;
+    font-size: 40px;
+    position: relative;
+    top: 20px;
+  }
+
+  hr {
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .copyright {
+    font: 200 14px "Oswald", sans-serif;
+    color: #555;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    top: 100px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  #menu {
+    top: 0;
+    right: -340px;
+    overflow: hidden;
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    transition: left 0.5s, right 0.5s;
+    background-color: rgba(86, 86, 86, 0.7);
+    position: fixed;
+    z-index: 2;
+  }
+
+  .toggle {
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    bottom: 90px;
+    left: 10px;
+    color: White;
+  }
+
+  .toggle:hover {
+    text-decoration: underline;
+  }
+
+  #open {
+    display: none;
+  }
+
+  #open:checked + #menu {
+    right: 0;
+  }
+
+  task {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    z-index: 2;
+    margin-left: 80px;
+    margin-bottom: 80px;
+  }
+
+  /* 追加詳細テキスト */
+  #todo-list p {
+    display: none;
+    padding: 0px;
+    position: relative;
+    bottom: 40px;
+    left: 50px;
+    font-size: 25px;
+  }
+
+  .togglebutton {
+    position: relative;
+    bottom: 10px;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    -webkit-box-shadow: 1px 2px 1px 2px;
+    box-shadow: 1px 1px 2px 2px;
+    border-radius: 30px;
+    height: 35px;
+  }
+
+  /* 全消去ボタン　*/
+  #Clear {
+    position: relative;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    -webkit-box-shadow: 1px 2px 1px 2px #e6d900;
+    box-shadow: 1px 1px 2px 2px #e6d900;
+    border-radius: 50%;
+    height: 35px;
+    color: White;
+  }
+
+  /* デフォルトのスタイル */
+  .newCheck {
+    position: relative;
+    background-color: White;
+    width: 23px;
+    height: 23px;
+    border-color: Blue;
+    left: 50px;
+  }
+
+  /*  CheckBoxのスタイル */
+  .newCheck:checked:before {
+    display: block;
+    box-sizing: border-box;
+    width: 26px;
+    height: 26px;
+    margin-top: -5px;
+    margin-right: 1.8px;
+    top: 4px;
+    position: absolute;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-color: Blue;
+    background-color: black;
+    animation: checkanime 0.1s;
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  /* チェックした時のスタイル */
+  .newCheck:checked:before {
+    position: absolute;
+    content: "✔︎";
+    font-size: 30px;
+    padding-bottom: 21px;
+    color: #fff;
+  }
+
+  /* チェックアニメーション */
+  @keyframes checkanime {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+
+    50% {
+      background-color: red;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* 先頭に戻る*/
+  .gotop {
+    position: fixed;
+    z-index: 100;
+    bottom: 130px;
+    right: 10px;
+    color: #cccccc;
+    font-size: 100%;
+    text-decoration: none;
+    padding: 5px 7px;
+    border-radius: 5px;
+    background-color: #000;
+    opacity: 0.4;
+  }
+  .gotop :hover {
+    opacity: 0.6;
+  }
+
+  .gotop {
+    filter: alpha(opacity=40);
+    zoom: 1;
+  }
+  .gotop :hover {
+    filter: alpha(opacity=60);
+  }
+
+  /* ヘルプ*/
+  .help::before {
+    content: "?";
+    font-size: 85%;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: 2px;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 50%;
+    background-color: #4287f5;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+  }
+
+  .sample-help {
+    position: relative;
+    color: #7444ac;
+    background-color: White;
+    border-radius: 5px;
+    font-size: 12px;
+    top: 30px;
+  }
+
+  ul .Box {
+    background: red;
+    z-index: 600;
+    display: block;
+  }
+
+  /* リスト内削除ボタン*/
+  .icon {
+    position: relative;
+    left: 25px;
+    background-color: black;
+    border-radius: 5px;
+  }
+
+  .icon:hover {
+    background: red;
+  }
+
+  .img-link {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  /* nav見出しのスタイル */
+  .submenu h3 {
+    margin: 0 0 1em 0;
+    font-size: 35px;
+    cursor: pointer;
+    color: #fff0f5;
+    text-align: center;
+  }
+
+  /* nav機能のスタイル */
+
+  .submenu a {
+    color: White;
+  }
+
+  @keyframes menu {
+    0% {
+      transform: rotate(1turn);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      transform: rotate(2000deg);
+    }
+
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  /*  フォーム　*/
+  .todo-text {
+    height: 50px;
+    font-size: 25px;
+    position: relative;
+    z-index: 3;
+    left: 200px;
+    height: 50px;
+    font-family: "Lato", sana-serif;
+    border: solid 1px #b3aca7;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    color: black;
+  }
+
+  #save:hover {
+    background: #1d49aa;
+  }
+
+  input#search {
+    height: 38px;
+    font-size: 18px;
+    position: relative;
+    z-index: 3;
+    left: 310px;
+    background: #333;
+    font-family: "Lato", sana-serif;
+    box-shadow: 0px 0px 10px rgb(255 25 255);
+    display: block;
+    color: #fff;
+    -webkit-appearance: none;
+    appearance: none;
+    bottom: 40px;
+    left: 280px;
+  }
+
+  input#search:hover {
+    background: black;
+  }
+
+  .inputField {
+    position: relative;
+    bottom: 80px;
+  }
+
+  #todo-form {
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+  }
+
+  #memo {
+    width: 40%;
+    height: 20px;
+    z-index: 3;
+    position: absolute;
+    right: 150px;
+  }
+
+  .add {
+    background: Blue;
+    position: relative;
+    left: 230px;
+    top: 5px;
+    width: 18%;
+    height: 35px;
+    font-size: 18px;
+    z-index: 3;
+    border-radius: 5px;
+  }
+
+  .footer span {
+    color: White;
+    font-size: 50px;
+  }
+
+  .pendingTasks {
+    background-color: red;
+    border-radius: 5px;
+  }
+
+  .footer {
+    text-align: center;
+    position: relative;
+    top: 50px;
+  }
+
+  body {
+    background-color: #333;
+  }
+
+  #todo-list {
+    font-size: 30px;
+  }
+
+  h1 {
+    position: relative!;
+    background-image: -webkit-linear-gradient(
+      315deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+    text-align: center;
+    font-size: 80px;
+  }
+
+  /* リスト内のスタイル */
+  .list {
+    position: relative;
+    bottom: 10px;
+    color: White;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    background-image: -webkit-linear-gradient(
+      315deg,
+      #b8751e 0%,
+      #ffce08 37%,
+      #fefeb2 47%,
+      #fafad6 50%,
+      #fefeb2 53%,
+      #e1ce08 63%,
+      #b8751e 100%
+    );
+    background-image: linear-gradient(
+      135deg,
+      #b8751e 0%,
+      #ffce08 37%,
+      #fefeb2 47%,
+      #fafad6 50%,
+      #fefeb2 53%,
+      #e1ce08 63%,
+      #b8751e 100%
+    );
+    -webkit-text-fill-color: transparent;
+  }
+
+  .list::before {
+    content: "\A";
+    white-space: pre;
+  }
+
+  li {
+    position: relative;
+    color: White;
+    margin: 25px;
+    margin-right: 50px;
+    left: 80px;
+    top: 50px;
+    font-size: 80px;
+    padding: 6px;
+    height: 100%;
+    animation: slide 1s ease-in;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: rotateX(2000deg);
+    }
+
+    100% {
+      transform: rotateX(-360deg);
+    }
+  }
+
+  /* 区切り線 */
+  .cp_hr02 {
+    position: relative;
+    top: 95px;
+    height: 10px;
+    background: linear-gradient(45deg, #ecf 50%, #50f 52%);
+    background-size: 20px 20px;
+    width: 170%;
+    right: 250px;
+    height: 17px;
+  }
+
+  .cp_hr03 {
+    position: relative;
+    height: 17px;
+    background: linear-gradient(45deg, #32a7f1 50%, #fce 52%);
+    background-size: 20px 20px;
+    width: 170%;
+    right: 250px;
+    top: 35px;
+  }
+
+  /* navメニューボタン */
+
+  .hidden {
+    list-style: none;
+    text-align: center;
+    position: absolute;
+    display: block !important;
+  }
+
+  .hidden p {
+    font-size: 18px;
+    position: relative;
+    top: -431px;
+    left: 177px;
+    font-weight: 800;
+    text-decoration: underline;
+  }
+
+  .submenu li {
+    height: 0px;
+    list-style: none;
+    left: 215px;
+  }
+
+  #sample-delete {
+    position: relative;
+    border-color: red;
+    background: black;
+    color: White;
+    width: 60%;
+    top: -234px;
+    left: 500px;
+  }
+
+  #sample-save {
+    position: relative;
+    border-color: orange;
+    background: Blue;
+    color: White;
+    width: 60%;
+    top: -197px;
+    left: 180px;
+  }
+
+  #sample-load {
+    border-color: pink;
+    background: green;
+    color: White;
+    width: 63%;
+    position: relative;
+    bottom: 160px;
+    right: 130px;
+  }
+
+  .calendar {
+    position: relative;
+    border-color: White;
+    background: #ff88ff;
+    color: black;
+    width: 62%;
+    top: -120px;
+    right: 25px;
+  }
+
+  #sample-text {
+    position: relative;
+    top: 20px;
+  }
+
+  #sample-load:hover {
+    background: #00552e;
+  }
+
+  #sample-save:hover {
+    background: #001f5b;
+  }
+
+  #sample-delete:hover {
+    background: #333;
+  }
+
+  #btn {
+    width: 30%;
+    color: White;
+    left: 80px;
+    position: relative;
+  }
+
+  #todo-form .Checkbtn {
+    display: none;
+  }
+
+  #addbutton:checked + .Checkbtn {
+    display: block;
+  }
+
+  /* チェックボタン数*/
+  .Checkbtn {
+    border: 5px outset #b9000e;
+    background-color: red;
+    position: relative;
+    left: 10px;
+  }
+
+  .Checkbtn:hover {
+    background-color: #b9000e;
+    border-radius: 5px;
+  }
+
+  /* カレンダー */
+  .wrapper {
+    margin: 15px auto;
+    max-width: 700px;
+  }
+  .container-calendar {
+    background: #ffffff;
+    padding: 15px;
+    width: 90%;
+    margin: 0 auto;
+    overflow: auto;
+    display: none;
+    height: 400px;
+    margin-top: 30px;
+  }
+  .button-container-calendar button {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #00a2b7;
+    color: #fff;
+    border: 1px solid #0aa2b5;
+    border-radius: 4px;
+    padding: 5px 10px;
+  }
+  .table-calendar {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .table-calendar th,
+  .table-calendar td {
+    padding: 10px;
+    border: 1px solid #e2e2e2;
+    text-align: center;
+    vertical-align: top;
+  }
+  .date-picker.selected {
+    font-weight: bold;
+    color: #fff;
+    background: #cc0000;
+  }
+  .date-picker.selected span {
+    border-bottom: 2px solid currentColor;
+  }
+  /* 日曜 */
+  .date-picker:nth-child(1) {
+    color: red;
+  }
+  /* 土曜 */
+  .date-picker:nth-child(7) {
+    color: blue;
+  }
+  #monthAndYear {
+    text-align: center;
+    margin-top: 0;
+  }
+  .button-container-calendar {
+    position: relative;
+    margin-bottom: 1em;
+    overflow: hidden;
+    clear: both;
+  }
+  #previous {
+    float: left;
+  }
+  #next {
+    float: right;
+  }
+  .footer-container-calendar {
+    margin-top: 1em;
+    border-top: 1px solid #dadada;
+    padding: 10px 0;
+  }
+  .footer-container-calendar select {
+    cursor: pointer;
+    display: inline-block;
+    zoom: 1;
+    background: #ffffff;
+    color: #454545;
+    border: 1px solid #bfc5c5;
+    border-radius: 3px;
+    padding: 5px 1em;
+  }
+
+  .textAnimation {
+    color: #ffffff;
+  }
+
+  /* タイトルアニメーション */
+
+  @keyframes shoBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+
+    50% {
+      color: yellow;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes shotop {
+    0% {
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+
+    50% {
+      color: black;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .textAnimation span:nth-of-type(odd) {
+    animation: shotop 3s;
+    animation-iteration-count: infinite;
+  }
+
+  .textAnimation span:nth-of-type(even) {
+    animation: shoBottom 3s;
+    animation-iteration-count: infinite;
+  }
+
+  .overflow-div {
+    /*スクロールバー幅*/
+    width: 1250px;
+    height: 300px;
+    overflow: scroll;
+    color: White;
+    position: relative;
+    top: 120px;
+    border: solid 3px #333;
+    left: 50px;
+    padding-left: 30px;
+  }
+
+  .children2 {
+    background: black;
+    height: 500px;
+    position: relative;
+    bottom: 20px;
+  }
+
+  .parent {
+    margin-top: 80px;
+  }
+
+  .children {
+    position: absolute;
+    left: 450px;
+    font-size: 45px;
+    color: #fff;
+    margin-top: 30px;
+    z-index: 1;
+  }
+
+  /* instagram紫グラデ背景 */
+  .insta_btn1 {
+    background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
+      no-repeat;
+    background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  }
+
+  /* Twitter */
+  .fl_tw1 {
+    background: #55acee;
+  }
+
+  /* はてブ */
+  .fl_hb1 {
+    background: #1ba5dc;
+  }
+
+  /* Pocket */
+  .fl_pk1 {
+    background: #ef3f56;
+  }
+
+  /* 問い合わせ */
+  .fl_ma1 {
+    background: #f3981d;
+  }
+
+  /* ボタン内テキスト調整 */
+  .flowbtn div {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0;
+    position: relative;
+  }
+  /* ボタンマウスホバー時 */
+  .flowbtn:hover {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    text-decoration: none;
+  }
+  /* ulタグの内側余白を０にする */
+  ul.snsbtniti {
+    padding: 0 !important;
+    position: relative;
+    bottom: 50px;
+  }
+  /* ボタン全体の位置調整 */
+  .snsbtniti {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  /* LINE */
+  .fl_li1 {
+    background: #00c300;
+  }
+
+  /* ボタン全体 */
+  .flowbtn {
+    font-family: "Arial", sans-serif;
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    width: 66px;
+    height: 58px;
+    font-size: 30px;
+    color: #fff !important;
+    transition: 0.5s;
+    text-decoration: none;
+    box-shadow: 0 1px 2px #999;
+  }
+
+  /* ボタン同士の余白調整 */
+  .snsbtniti li {
+    flex: 0 0 20%;
+    padding: 20px;
+  }
+
+  .flowbtn i {
+    position: relative;
+    bottom: 1px;
+  }
+
+  /* Contact内 */
+
+  #my_form {
+    text-align: center;
+    background: black;
+    height: 100%;
+    position: relative;
+    top: 60px;
+  }
+
+  #my_form ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  #my_form ol p {
+    list-style: none;
+    display: inline-block;
+    width: 18%;
+    min-width: 90px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+  #my_form ol p.current a {
+    color: #f33135;
+  }
+  #my_form ol p a:hover {
+    color: #e7da66;
+  }
+
+  #my_form p {
+    color: White;
+    font-size: 25px;
+  }
+
+  #my_form h2 {
+    color: #fff;
+    font-size: 80px;
+    position: relative;
+    top: 20px;
+  }
+
+  hr {
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .copyright {
+    font: 200 14px "Oswald", sans-serif;
+    color: #555;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    top: 100px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  #menu {
+    padding: -1px;
+    transition: left 0.5s, right 0.5s;
+    background-color: rgba(86, 86, 86, 0.7);
+    height: 300px;
+    z-index: 2;
+    margin-bottom: 120px;
+    display: none;
+  }
+
+  .toggle {
+    font-size: 70px;
+    cursor: pointer;
+    position: relative;
+    bottom: 160px;
+    left: 20px;
+    color: White;
+  }
+
+  .toggle:hover {
+    text-decoration: underline;
+  }
+
+  #open {
+    display: none;
+  }
+
+  #open:checked + #menu {
+    height: 360px;
+    width: 100%;
+    float: left;
+    position: relative;
+    display: block;
+  }
+
+  task {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    z-index: 2;
+    margin-left: 80px;
+    margin-bottom: 80px;
+  }
+
+  /* 追加詳細テキスト */
+  #todo-list p {
+    display: none;
+    padding: 0px;
+    position: relative;
+    bottom: 40px;
+    left: 50px;
+    font-size: 25px;
+  }
+
+  .togglebutton {
+    position: relative;
+    bottom: 10px;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    -webkit-box-shadow: 1px 2px 1px 2px;
+    box-shadow: 1px 1px 2px 2px;
+    border-radius: 30px;
+    height: 35px;
+  }
+
+  /* 全消去ボタン　*/
+  #Clear {
+    position: relative;
+    -webkit-transform: translate(3px, 3px);
+    transform: translate(3px, 3px);
+    -webkit-box-shadow: 1px 2px 1px 2px #e6d900;
+    box-shadow: 1px 1px 2px 2px #e6d900;
+    border-radius: 50%;
+    height: 35px;
+    color: #000;
+    left: 30px;
+  }
+
+  /* デフォルトのスタイル */
+  .newCheck {
+    position: relative;
+    background-color: White;
+    width: 23px;
+    height: 23px;
+    border-color: Blue;
+    left: 60px;
+    bottom: 10px;
+  }
+
+  /*  CheckBoxのスタイル */
+  .newCheck:checked:before {
+    display: block;
+    box-sizing: border-box;
+    width: 26px;
+    height: 26px;
+    margin-top: -5px;
+    margin-right: 1.8px;
+    top: 4px;
+    position: absolute;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    border-color: Blue;
+    background-color: black;
+    animation: checkanime 0.1s;
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  /* チェックした時のスタイル */
+  .newCheck:checked:before {
+    position: absolute;
+    content: "✔︎";
+    font-size: 50px;
+    padding-bottom: 21px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+  }
+
+  /* チェックアニメーション */
+  @keyframes checkanime {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+
+    50% {
+      background-color: red;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* 先頭に戻る*/
+  .gotop {
+    position: fixed;
+    z-index: 100;
+    bottom: 10px;
+    right: 10px;
+    color: #cccccc;
+    font-size: 100%;
+    text-decoration: none;
+    padding: 5px 7px;
+    border-radius: 5px;
+    background-color: #000;
+    opacity: 0.4;
+  }
+  .gotop :hover {
+    opacity: 0.6;
+  }
+
+  .gotop {
+    filter: alpha(opacity=40);
+    zoom: 1;
+  }
+  .gotop :hover {
+    filter: alpha(opacity=60);
+  }
+
+  /* ヘルプ*/
+  .help::before {
+    content: "?";
+    font-size: 30px;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: 2px;
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 50%;
+    background-color: #4287f5;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    top: -150px;
+    left: 313px;
+  }
+
+  .sample-help {
+    position: relative;
+    color: #7444ac;
+    background-color: White;
+    border-radius: 5px;
+    font-size: 18px;
+    top: -275px;
+    left: 380px;
+  }
+
+  ul .Box {
+    background: red;
+    z-index: 600;
+    display: block;
+  }
+
+  /* リスト内削除ボタン*/
+  .icon {
+    position: relative;
+    left: 25px;
+    background-color: black;
+    border-radius: 5px;
+  }
+
+  .icon:hover {
+    background-color: red;
+  }
+}
